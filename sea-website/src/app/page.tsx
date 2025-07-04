@@ -1,36 +1,15 @@
 "use client";
 
 import React from 'react';
-import styled from 'styled-components';
-import Footer from '../components/Footer';
-import PrevalenciaChart from '@/components/PrevalenciaChart';
-import MercadoChart from '@/components/MercadoChart';
-import TelepsicologiaChart from '@/components/TelepsicologiaChart';
+import Footer from '../components/Footer'; 
+import PrevalenciaChart from '@/components/PrevalenciaChart'; 
+import MercadoChart from '@/components/MercadoChart'; 
+import TelepsicologiaChart from '@/components/TelepsicologiaChart'; 
 
-const colors = {
-    teal: '#008B8B',
-    cyan: '#00CECB',
-    redAccent: '#FF5E5B',
-    paleYellow: '#FFFFEA',
-    gray800: '#212529',
-    gray700: '#495057',
-    gray600: '#6C757D',
-    gray500: '#ADB5BD',
-    gray300: '#DEE2E6',
-    white: '#FFFFFF',
-};
-
-const StyledBody = styled.div`
-    font-family: 'Poppins', sans-serif;
-    background-color: #F8F9FA;
-    color: ${colors.gray800};
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-`;
 
 const Header = () => (
     <header className="text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold text-teal mb-2">SEA</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-teal-600 mb-2">SEA</h1> 
         <p className="text-xl md:text-2xl text-gray-700">A Próxima Geração do Apoio Emocional no Brasil</p>
     </header>
 );
@@ -44,19 +23,19 @@ const ProblemSection = () => (
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
-                <span className="text-6xl font-bold text-red-accent">45%</span>
+                <span className="text-6xl font-bold text-red-400">45%</span>
                 <p className="mt-2 text-lg text-gray-700">da população brasileira relata sofrer de ansiedade.</p>
                 <p className="text-sm text-gray-500 mt-1">(Ipsos, 2024)</p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
-                <span className="text-6xl font-bold text-red-accent">4º</span>
+                <span className="text-6xl font-bold text-red-400">4º</span>
                 <p className="mt-2 text-lg text-gray-700">lugar no ranking global de estresse.</p>
                  <p className="text-sm text-gray-500 mt-1">(ISMA-BR)</p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1">
-                <span className="text-6xl font-bold text-red-accent">77%</span>
+                <span className="text-6xl font-bold text-red-400">77%</span>
                 <p className="mt-2 text-lg text-gray-700">dos brasileiros refletem sobre a importância da saúde mental.</p>
-                 <p className="text-sm text-gray-500 mt-1">(Pitch Deck SEA)</p>
+                 <p className="text-sm text-gray-500 mt-1">(ISMA-BR)</p>
             </div>
         </div>
 
@@ -77,11 +56,13 @@ const MarketSection = () => (
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
-                <span className="text-5xl font-bold text-teal">R$ 2.1 Bilhões</span>
+
+                <span className="text-5xl font-bold text-teal-600">R$ 2.1 Bilhões</span> 
                 <p className="mt-2 text-lg text-gray-700">investidos em Healthtechs no Brasil em 2024.</p>
             </div>
              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
-                <span className="text-5xl font-bold text-teal">17.3%</span>
+
+                <span className="text-5xl font-bold text-teal-600">17.3%</span> 
                 <p className="mt-2 text-lg text-gray-700">Crescimento Anual Composto (CAGR) esperado para o mercado global de tecnologia de saúde mental.</p>
             </div>
         </div>
@@ -102,22 +83,22 @@ const SolutionSection = () => (
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-5 items-center gap-8">
-                <div className="text-center lg:col-span-2">
+          
+            <div className="grid grid-cols-1 gap-8">
+                <div className="text-center">
                     <div className="p-6 border-2 border-dashed border-cyan rounded-xl">
                         <span className="text-6xl">🤖</span>
-                        <h4 className="text-2xl font-bold text-teal mt-2">IA Empática 24/7</h4>
+                        <h4 className="text-2xl font-bold text-teal-600 mt-2">IA Empática 24/7</h4>
                         <p className="text-gray-600 mt-2">Uma IA treinada em TCC oferece suporte instantâneo e qualificado, detectando crises antes que elas aconteçam através da análise de voz e texto.</p>
                     </div>
                 </div>
 
-                {/* Flow Arrow for Large Screens */}
+                
                 <div className="hidden lg:flex flex-col items-center justify-center">
                     <div className="w-0.5 h-10 bg-cyan"></div>
                     <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-cyan"></div>
                 </div>
-                 {/* Flow Arrow for Small/Medium Screens */}
-                 <div className="lg:hidden flex-row items-center justify-center my-4">
+                <div className="lg:hidden flex-row items-center justify-center my-4">
                     <div className="w-0 h-0 border-t-4 border-b-4 border-l-8 border-t-transparent border-b-transparent border-l-cyan"></div>
                 </div>
 
@@ -125,26 +106,24 @@ const SolutionSection = () => (
                 <div className="text-center">
                     <div className="p-6 border-2 border-dashed border-cyan rounded-xl">
                         <span className="text-6xl">⌚</span>
-                        <h4 className="text-2xl font-bold text-teal mt-2">Dados Biométricos</h4>
-                        <p className="text-gray-600 mt-2">Integração com wearables para criar um &quot;diário emocional objetivo&quot;, transformando dados vitais em insights acionáveis.</p>
+                        <h4 className="text-2xl font-bold text-teal-600 mt-2">Dados Biométricos</h4>
+                        <p className="text-gray-600 mt-2">Integração com wearables para criar um diário emocional objetivo, transformando dados vitais em insights acionáveis.</p>
                     </div>
                 </div>
 
-                {/* Flow Arrow for Large Screens */}
-                 <div className="hidden lg:flex flex-col items-center justify-center">
+                <div className="hidden lg:flex flex-col items-center justify-center">
                     <div className="w-0.5 h-10 bg-cyan"></div>
                     <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-cyan"></div>
                 </div>
-                 {/* Flow Arrow for Small/Medium Screens */}
-                 <div className="lg:hidden flex-row items-center justify-center my-4">
+                <div className="lg:hidden flex-row items-center justify-center my-4">
                     <div className="w-0 h-0 border-t-4 border-b-4 border-l-8 border-t-transparent border-b-transparent border-l-cyan"></div>
-                </div>
+                </div> 
 
 
-                 <div className="text-center lg:col-span-1">
+                 <div className="text-center">
                     <div className="p-6 border-2 border-dashed border-cyan rounded-xl">
                         <span className="text-6xl">🤝</span>
-                        <h4 className="text-2xl font-bold text-teal mt-2">Conexão Humana</h4>
+                        <h4 className="text-2xl font-bold text-teal-600 mt-2">Conexão Humana</h4>
                         <p className="text-gray-600 mt-2">Uma ponte para psicólogos e clínicas, com dashboards de insights e agendamento facilitado, empoderando profissionais.</p>
                     </div>
                 </div>
@@ -152,6 +131,7 @@ const SolutionSection = () => (
         </div>
     </section>
 );
+
 
 const DifferentialsSection = () => (
     <section id="diferenciais">
@@ -170,23 +150,29 @@ const DifferentialsSection = () => (
                 <h3 className="text-2xl font-bold text-gray-800 text-center mb-6">O Poder da Tecnologia Comprovada</h3>
                 <div className="space-y-6">
                     <div className="flex items-start space-x-4">
+
                         <div className="bg-cyan text-white rounded-full h-8 w-8 flex-shrink-0 flex items-center justify-center font-bold">✓</div>
                         <div>
-                            <h4 className="font-bold text-lg text-teal">IA Eficaz</h4>
+            
+                            <h4 className="font-bold text-lg text-teal-600">IA Eficaz</h4> 
                             <p className="text-gray-600">Estudos mostram que chatbots de IA podem ser tão eficazes quanto a terapia tradicional na construção de laços terapêuticos e no suporte inicial.</p>
                         </div>
                     </div>
                     <div className="flex items-start space-x-4">
+
                         <div className="bg-cyan text-white rounded-full h-8 w-8 flex-shrink-0 flex items-center justify-center font-bold">✓</div>
                         <div>
-                            <h4 className="font-bold text-lg text-teal">Dados Confiáveis de Wearables</h4>
+            
+                            <h4 className="font-bold text-lg text-teal-600">Dados Confiáveis de Wearables</h4> 
                             <p className="text-gray-600">A precisão dos dados de smartwatches (sono, FC) aproxima-se dos padrões clínicos, permitindo análises preditivas confiáveis.</p>
                         </div>
                     </div>
                      <div className="flex items-start space-x-4">
+
                         <div className="bg-cyan text-white rounded-full h-8 w-8 flex-shrink-0 flex items-center justify-center font-bold">✓</div>
                         <div>
-                            <h4 className="font-bold text-lg text-teal">Alta Satisfação do Paciente</h4>
+            
+                            <h4 className="font-bold text-lg text-teal-600">Alta Satisfação do Paciente</h4> 
                             <p className="text-gray-600">65% dos pacientes relatam maior satisfação com a telepsicologia, reforçando a demanda por soluções digitais e remotas.</p>
                         </div>
                     </div>
@@ -198,7 +184,7 @@ const DifferentialsSection = () => (
 
 const HomePage = () => {
     return (
-        <StyledBody>
+        <div className="font-sans bg-gray-50 text-gray-800 antialiased">
             <main className="container mx-auto p-4 md:p-8">
                 <Header />
                 <ProblemSection />
@@ -206,7 +192,7 @@ const HomePage = () => {
                 <SolutionSection />
                 <DifferentialsSection />
             </main>
-        </StyledBody>
+        </div>
     );
 };
 
