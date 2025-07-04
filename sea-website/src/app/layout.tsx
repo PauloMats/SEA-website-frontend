@@ -1,6 +1,7 @@
-import './globals.css'; // Import global styles, including Tailwind
+import './globals.css';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'; // importa o footer aqui
 
-import Navbar from '../components/Navbar'; // Import the Navbar component
 export default function RootLayout({
   children,
 }: {
@@ -14,10 +15,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
         <title>SEA Platform</title>
       </head>
-      <body>
-        <Navbar /> {/* Render the Navbar component */}
-
-        {children} {/* Render the rest of the page content */}
+      <body className="bg-[#F8F9FA] text-[#212529] font-poppins">
+        <Navbar />
+        <main className="container mx-auto px-4 md:px-8">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

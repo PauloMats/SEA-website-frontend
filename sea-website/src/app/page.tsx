@@ -3,9 +3,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
+import PrevalenciaChart from '@/components/PrevalenciaChart';
+import MercadoChart from '@/components/MercadoChart';
+import TelepsicologiaChart from '@/components/TelepsicologiaChart';
 
-// Define color palette using Tailwind conventions for clarity within Styled Components if needed,
-// though primarily using Tailwind classes.
 const colors = {
     teal: '#008B8B',
     cyan: '#00CECB',
@@ -19,7 +20,6 @@ const colors = {
     white: '#FFFFFF',
 };
 
-// Styled Component for the body background color and font, though we will primarily use global styles or Tailwind
 const StyledBody = styled.div`
     font-family: 'Poppins', sans-serif;
     background-color: #F8F9FA;
@@ -64,9 +64,7 @@ const ProblemSection = () => (
         <div className="mt-12 bg-white rounded-xl shadow-lg p-6">
              <h3 className="text-2xl font-bold text-gray-800 text-center mb-4">Grupos Mais Afetados pela Ansiedade</h3>
              <p className="text-md text-gray-600 text-center mb-8">A ansiedade não afeta a todos igualmente. Mulheres e jovens adultos apresentam taxas de prevalência significativamente mais altas, indicando uma necessidade de suporte direcionado.</p>
-            <div className="chart-container w-full max-w-xl mx-auto h-72 md:h-80 flex items-center justify-center bg-gray-100 rounded-lg text-gray-500">
-                Chart Placeholder - Ansiedade Chart
-            </div>
+            <PrevalenciaChart />
         </div>
     </section>
 );
@@ -91,9 +89,7 @@ const MarketSection = () => (
          <div className="bg-white rounded-xl shadow-lg p-6">
             <h3 className="text-2xl font-bold text-gray-800 text-center mb-4">Crescimento do Mercado Global de Tecnologia de Saúde Mental</h3>
             <p className="text-md text-gray-600 text-center mb-8">O setor está projetado para mais que quadruplicar em uma década, demonstrando a imensa confiança do mercado e o potencial de crescimento a longo prazo.</p>
-            <div className="chart-container w-full max-w-xl mx-auto h-72 md:h-80 flex items-center justify-center bg-gray-100 rounded-lg text-gray-500">
-                Chart Placeholder - Mercado Crescimento Chart
-            </div>
+            <MercadoChart />
         </div>
     </section>
 );
@@ -168,9 +164,7 @@ const DifferentialsSection = () => (
                 <h3 className="text-2xl font-bold text-gray-800 text-center mb-4">Adoção da Telepsicologia no Brasil</h3>
                 <p className="text-md text-gray-600 text-center mb-8">A telemedicina já é uma realidade consolidada, com altíssima adesão dos profissionais, validando nosso modelo de integração com psicólogos.</p>
                 {/* Placeholder for chart */}
-                <div className="chart-container w-full h-64 md:h-72 flex items-center justify-center bg-gray-100 rounded-lg text-gray-500">
-                     Chart Placeholder - Telepsicologia Chart
-                </div>
+                <TelepsicologiaChart />
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-gray-800 text-center mb-6">O Poder da Tecnologia Comprovada</h3>
@@ -211,7 +205,6 @@ const HomePage = () => {
                 <MarketSection />
                 <SolutionSection />
                 <DifferentialsSection />
-                <Footer />
             </main>
         </StyledBody>
     );

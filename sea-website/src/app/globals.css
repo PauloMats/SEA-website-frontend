@@ -1,17 +1,10 @@
 @import "tailwindcss";
 
-/* Adiciona a fonte Poppins do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Define estilos globais para o corpo */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #F8F9FA; /* Cor de fundo do HTML original */
-  color: #212529; /* Cor do texto do HTML original */
+  background-color: #F8F9FA;
+  color: #212529; 
+  margin-top: 10%;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
