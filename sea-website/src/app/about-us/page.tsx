@@ -22,7 +22,7 @@ const AboutUsPage: React.FC = () => {
  <section className="mb-12">
  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Mapeamento Emocional Inteligente</h2>
  <p className="text-lg text-gray-600">
- Integramos dados de smartwatches e outros wearables para criar um &quot;diário emocional objetivo&quot;. Ao analisar padrões de sono, frequência cardíaca e outros sinais vitais, nossa plataforma fornece insights valiosos para usuários e profissionais, permitindo um acompanhamento mais preciso e proativo do bem-estar emocional.
+          Integramos dados de smartwatches e outros wearables para criar um "diário emocional objetivo". Ao analisar padrões de sono, frequência cardíaca e outros sinais vitais, nossa plataforma fornece insights valiosos para usuários e profissionais, permitindo um acompanhamento mais preciso e proativo do bem-estar emocional.
  </p>
  </section>
 
