@@ -1,5 +1,6 @@
 import './globals.css'; // Import global styles, including Tailwind
 
+import Navbar from '../components/Navbar'; // Import the Navbar component
 export default function RootLayout({
   children,
 }: {
@@ -11,7 +12,9 @@ export default function RootLayout({
         <title>SEA Platform</title>
       </head>
       <body>
-        {children}
+        <Navbar /> {/* Render the Navbar component */}
+
+        {children} {/* Render the rest of the page content */}
       </body>
     </html>
   );
