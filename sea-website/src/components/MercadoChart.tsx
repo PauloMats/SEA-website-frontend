@@ -36,7 +36,7 @@ const options = {
     },
     tooltip: {
       callbacks: {
-        label: (context: any) => `$${context.raw}B`,
+        label: (context: import('chart.js').TooltipItem<'line'>) => `$${context.raw}B`,
       },
     },
   },

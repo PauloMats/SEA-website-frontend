@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Footer from '../components/Footer'; 
 import PrevalenciaChart from '@/components/PrevalenciaChart'; 
 import MercadoChart from '@/components/MercadoChart'; 
 import TelepsicologiaChart from '@/components/TelepsicologiaChart'; 

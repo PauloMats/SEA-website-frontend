@@ -3,18 +3,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import DropdownIcon from './DropdownIcon'; // Certifique-se de que este caminho está correto
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false); // Definido mas não usado, considere remover se não for usar
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);   // Definido mas não usado, considere remover se não for usar
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setDesktopDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -25,7 +21,6 @@ const Navbar: React.FC = () => {
 
   const handleMobileLinkClick = () => {
     setMenuOpen(false);
-    setMobileDropdownOpen(false);
   };
 
   return (
@@ -47,21 +42,17 @@ const Navbar: React.FC = () => {
           <Link href="/#diferenciais" className="text-white font-semibold hover:underline">Diferenciais</Link>
         </nav>
 
-        {/* Menu mobile já tava ok */}
-        {/* Você pode adicionar o botão do menu mobile aqui se ele estiver faltando */}
         <button 
           className="lg:hidden text-white" 
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle mobile menu"
         >
-          {/* Ícone de menu (ex: um SVG ou um ícone de biblioteca) */}
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
 
-      {/* Dropdown mobile (mantém branco também) */}
       {menuOpen && (
-        <div className="lg:hidden px-6 pb-6 space-y-2 bg-[rgba(23,95,164,0.8)] shadow">
+        <div className="lg:hidden px-6 pb-6 space-y-2 bg-[rgba(23,95,164,0.7)] shadow"> {/* Opacidade ajustada para 0.7 para parecer mais claro */}
           <Link href="/#problema" className="block text-white font-semibold py-2" onClick={handleMobileLinkClick}>Problema</Link>
           <Link href="/#mercado" className="block text-white font-semibold py-2" onClick={handleMobileLinkClick}>Mercado</Link>
           <Link href="/#solucao" className="block text-white font-semibold py-2" onClick={handleMobileLinkClick}>Solução</Link>
